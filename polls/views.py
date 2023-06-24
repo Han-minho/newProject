@@ -8,12 +8,14 @@ from polls.models import Question,Choice
 
 logger = logging.getLogger(__name__)
 # Create your views here.
+
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        return Question.objects().all().order_by('pub_date')[:5]
+        # 최근 생성된 질문 5개를 반환함
+        return Question.objects.all().order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
     model = Question
