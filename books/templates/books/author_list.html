@@ -1,14 +1,14 @@
 {% extends "base_books.html" %}
-
-{% block content %}
-<h2>Author List</h2>
-<ul>
-    {% for author in object_list %}
-    <li>
-        <a href="{% url 'books:author_detail' author.id %}">
-            {{ author.name }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+2
+3	{% block content %}
+4	<h2>Author List</h2>
+5	<ul>
+6	    {% for author in object_list %}
+7	    <li>
+8	        <a href="{% url 'books:author_detail' author.id %}">
+9	            {{ author.name }}
+10	        </a>
+11	    </li>
+12	    {% endfor %}
+13	</ul>
+14	{% endblock %}
