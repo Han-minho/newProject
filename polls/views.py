@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from polls.models import Question,Choice
 from django.urls import reverse
+import logging
 
 # Create your views here.
 def index(request):
@@ -18,6 +19,8 @@ def detail(request,question_id):
 def vote(request,question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
+        logger = logging.getLogger('project.interesting.stuff')
+        logger.debug('TEST')
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
@@ -31,6 +34,6 @@ def vote(request,question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 
-def results(request):
+def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
