@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    #"books.apps.BooksConfig",
+    "books.apps.BooksConfig",
     "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -60,7 +60,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'polls/templates/',
-            #'books/templates/',
+            'books/templates/',
             'templates',
         ],
         'APP_DIRS': True,

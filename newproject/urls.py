@@ -21,6 +21,6 @@ from newproject import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/',include('polls.urls')),
-    #path('books/',include('books.urls')),
+    path('books/',include('books.urls')),
     path('',views.HomeView.as_view(), name='Home')
 ]
