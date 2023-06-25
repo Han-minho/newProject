@@ -6,3 +6,5 @@ list_example.txt
 /venv/common.py
 /venv/exception.py
 /venv/pyvenv.cfg
+/venv/Scripts/
+/venv/Lib/
