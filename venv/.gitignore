@@ -3,3 +3,6 @@ new_example.txt
 list_example.txt
 /newproject/db.sqllite3
 /venv/
+/venv/common.py
+/venv/exception.py
+/venv/pyvenv.cfg
