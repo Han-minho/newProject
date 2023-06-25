@@ -59,8 +59,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'polls/templates/polls',
-            'books/templates/books',
+            'polls/templates/',
+            'books/templates/',
             'templates',
         ],
         'APP_DIRS': True,
