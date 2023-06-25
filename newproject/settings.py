@@ -26,15 +26,15 @@ SECRET_KEY = 'django-insecure-*j^sc^dk=cz)galjgi=^b_hzr=jm+2@3x@j%8$xcf6s1qcd&+m
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost','127.0.0.1'
+    'localhost', '127.0.0.1'
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-    'books.apps.BooksConfig',
+    "books.apps.BooksConfig",
+    "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
