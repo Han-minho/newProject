@@ -57,7 +57,9 @@ ROOT_URLCONF = 'newproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'polls/templates/',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
